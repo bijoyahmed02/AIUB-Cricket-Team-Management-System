@@ -92,9 +92,7 @@ Add MySQL Connector JAR in Java project
 Run the Java program
 
 ✅ Conclusion
-
 This project demonstrates a complete database system with:
-
 3NF normalization
 SQL queries (CRUD operations)
 Joins, subqueries, and aggregations
