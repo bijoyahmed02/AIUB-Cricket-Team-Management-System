@@ -1,42 +1,58 @@
 # 🏏 AIUB Cricket Team Management System
 
-**Course:** Introduction to Database 
-**Supervisor:** MD Sajid Bin Faisal  
-**Student:** Bijoy Ahamed (22-449373-3)
+## 📚 Course Information
+- **Course:** Introduction to Database  
+- **Supervisor:** MD Sajid Bin Faisal  
+- **Student:** Bijoy Ahamed (22-449373-3)
 
 ---
 
 ## 📌 Overview
-Database system for AIUB Cricket Team to manage players, selectors, officials, coaches, events, and tournaments.
-
-**Tools:** Oracle 10g, draw.io, Java JDBC, XAMPP/MySQL
+This project is a database system for the AIUB Cricket Team to manage:
+- Players  
+- Selectors  
+- Officials  
+- Coaches  
+- Events  
+- Tournaments  
 
 ---
 
-## 📊 Tables (14)
+## 🛠️ Tools & Technologies
+- Oracle 10g  
+- draw.io  
+- Java (JDBC)  
+- XAMPP / MySQL  
 
-| Table | PK | FK |
-|-------|----|----|
-| Player | P_ID | - |
-| Selector | S_ID | - |
-| Confirm | P_ID | S_ID |
-| Address | City,Country | - |
-| Official | O_ID | - |
-| Selects | P_ID | O_ID |
+---
+
+## 📊 Database Tables (14)
+
+| Table           | Primary Key | Foreign Key |
+|----------------|------------|------------|
+| Player         | P_ID       | -          |
+| Selector       | S_ID       | -          |
+| Confirm        | P_ID       | S_ID       |
+| Address        | City,Country | -        |
+| Official       | O_ID       | -          |
+| Selects        | P_ID       | O_ID       |
 | Detail_Address | Zone,Area,City,Country | - |
-| Coache | C_ID | - |
-| Guid | P_ID | C_ID |
-| Appoint | O_ID | C_ID |
-| Detail | Zone,Area | - |
-| Event | E_ID | - |
-| Moderator | O_ID | E_ID |
-| Operates | T_No | E_ID |
-
-**Normalization:** UNF → 1NF → 2NF → 3NF
+| Coache         | C_ID       | -          |
+| Guid           | P_ID       | C_ID       |
+| Appoint        | O_ID       | C_ID       |
+| Detail         | Zone,Area  | -          |
+| Event          | E_ID       | -          |
+| Moderator      | O_ID       | E_ID       |
+| Operates       | T_No       | E_ID       |
 
 ---
 
-## 💻 SQL
+## 🔄 Normalization
+UNF → 1NF → 2NF → 3NF
+
+---
+
+## 💻 SQL Implementation
 
 ```sql
 CREATE TABLE Player (
@@ -49,9 +65,11 @@ CREATE TABLE Player (
     City VARCHAR2(20)
 );
 
-INSERT INTO Player VALUES (49373, 'Bijoy Ahamed', 'Batsman', 23, 'Right-Handed', 'Captain', 'Brahmanbaria');
+INSERT INTO Player VALUES 
+(49373, 'Bijoy Ahamed', 'Batsman', 23, 'Right-Handed', 'Captain', 'Brahmanbaria');
 
 SELECT * FROM Player WHERE P_Name = 'Bijoy Ahamed';
+
 SELECT COUNT(C_ID) FROM Coache;
 
 🔌 Java Connection
@@ -65,12 +83,19 @@ while(rs.next()) {
 }
 con.close();
 
-🚀 Run
-Install XAMPP → Start Apache & MySQL
+🚀 How to Run
+Install XAMPP
+Start Apache & MySQL
 Create database: aiub_cricket
 Run SQL scripts
-Add MySQL Connector JAR
-Run Java program
+Add MySQL Connector JAR in Java project
+Run the Java program
 
 ✅ Conclusion
-Complete database system with 3NF normalization, SQL queries, views, joins, subqueries, and Java connectivity.
+
+This project demonstrates a complete database system with:
+
+3NF normalization
+SQL queries (CRUD operations)
+Joins, subqueries, and aggregations
+Java connectivity using JDBC
