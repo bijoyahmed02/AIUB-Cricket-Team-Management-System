@@ -65,16 +65,12 @@ while(rs.next()) {
 }
 con.close();
 
----
-
-## 🚀 Run
+🚀 Run
 Install XAMPP → Start Apache & MySQL
 Create database: aiub_cricket
 Run SQL scripts
 Add MySQL Connector JAR
 Run Java program
 
----
-
-## ✅ Conclusion
+✅ Conclusion
 Complete database system with 3NF normalization, SQL queries, views, joins, subqueries, and Java connectivity.
