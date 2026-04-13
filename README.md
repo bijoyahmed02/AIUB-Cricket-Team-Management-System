@@ -1,6 +1,6 @@
 # 🏏 AIUB Cricket Team Management System
 
-**Course:** Introduction to Database | **Fall 2023-2024** | **Section: G**  
+**Course:** Introduction to Database 
 **Supervisor:** MD Sajid Bin Faisal  
 **Student:** Bijoy Ahamed (22-449373-3)
 
@@ -53,6 +53,7 @@ INSERT INTO Player VALUES (49373, 'Bijoy Ahamed', 'Batsman', 23, 'Right-Handed',
 
 SELECT * FROM Player WHERE P_Name = 'Bijoy Ahamed';
 SELECT COUNT(C_ID) FROM Coache;
+
 🔌 Java Connection
 java
 Class.forName("com.mysql.jdbc.Driver");
@@ -63,12 +64,17 @@ while(rs.next()) {
     System.out.println(rs.getString("P_Name"));
 }
 con.close();
-🚀 Run
+
+---
+
+## 🚀 Run
 Install XAMPP → Start Apache & MySQL
 Create database: aiub_cricket
 Run SQL scripts
 Add MySQL Connector JAR
 Run Java program
 
-##✅ Conclusion
+---
+
+## ✅ Conclusion
 Complete database system with 3NF normalization, SQL queries, views, joins, subqueries, and Java connectivity.
